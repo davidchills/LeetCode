@@ -1,4 +1,9 @@
 <?php
+/*
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+
+The overall run time complexity should be O(log (m+n)).
+*/
 class Solution {
 
     /**
@@ -14,7 +19,7 @@ class Solution {
         $middle = floor($n/2);
         if ($n%2===0) { return (($nums[$middle] + $nums[$middle-1])/2); }
         else { return $nums[$middle]; }
-        return $nums;
+        return $nums;        
     }
 }
 
