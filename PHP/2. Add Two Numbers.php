@@ -15,7 +15,7 @@ class ListNode {
 }
 
 function createLinkedList($arr) {
-    if (empty($arr)) return null;
+    if (empty($arr)) { return null; }
     $head = new ListNode(array_shift($arr));
     $current = $head;
     foreach ($arr as $val) {
