@@ -24,6 +24,6 @@ class Solution {
 }
 
 $c = new Solution;
-print_r($c->climbStairs(2)); // Expect 2
-//print_r($c->climbStairs(3)); // Expect 3
+//print_r($c->climbStairs(2)); // Expect 2
+print_r($c->climbStairs(3)); // Expect 3
 ?>
