@@ -23,14 +23,7 @@ impl Solution {
         score.iter().map(|&s| rank_map[&s].clone()).collect()
     }
 }
-/*
-fn main() {
-    let scores = vec![5,4,3,2,1];
-    let ranks = Solution::find_relative_ranks(scores);
-    println!("{:?}", ranks);
-    // Expect ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
-}
-*/
+
 fn main() {
     let scores = vec![10,3,8,9,4];
     let ranks = Solution::find_relative_ranks(scores);
