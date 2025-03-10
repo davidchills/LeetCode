@@ -20,7 +20,7 @@ class Solution {
     }
 
     private function inOrder($node, $k) {
-        if ($node === null || $this->result !== null) return;
+        if ($node === null || $this->result !== null) { return; }
 
         // Left subtree
         $this->inOrder($node->left, $k);
