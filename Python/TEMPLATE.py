@@ -2,7 +2,8 @@
 Description
 """
 # 506. Relative Ranks
-class Solution(object):
+from typing import List
+class Solution:
     def findRelativeRanks(self, score):
         """
         :type score: List[int]
