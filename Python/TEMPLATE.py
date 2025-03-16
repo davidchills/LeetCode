@@ -28,9 +28,5 @@ class Solution:
         return result
     
 # Test Code
-
 solution = Solution()
-
-#score = [5,4,3,2,1] # Expect ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
-score = [10,3,8,9,4] # Expect ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
 print(solution.findRelativeRanks(score))
