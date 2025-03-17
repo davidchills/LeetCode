@@ -29,5 +29,5 @@ function listToArray(head) {
     return arr;
 }
 export { ListNode, buildList, listToArray };
-//import { listNode, buildList } from './buildLinkedList.js'
+//import { ListNode, buildList, listToArray } from './buildLinkedList.js'
 //console.log(buildTree([1,2,3,null,5,null,4]));
