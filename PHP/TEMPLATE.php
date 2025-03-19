@@ -1,22 +1,22 @@
 <?php
 /*
-Description
+DESCRIPTION
 */
 class Solution {
 
     /**
-     * 394. Decode String
-     * @param String $s
-     * @return String
+     * XXX
+     * @param ListNode $head
+     * @return Integer
      */
-    function decodeString($s) {
-
+    function pairSum($head) {
+        
     }
 }
 
 $c = new Solution;
-//print_r($c->decodeString("3[a]2[bc]")); // Expect "aaabcbc"
-//print_r($c->decodeString("3[a2[c]]")); // Expect "accaccacc"
-//print_r($c->decodeString("2[abc]3[cd]ef")); // Expect "abcabccdcdcdef"
-print_r($c->decodeString("99[99[99[99[99[99[a]]]]]]")); // Expect "Output too large! Skipping expansion."
+print_r($c->pairSum()); // Expect "XXX"
+//print_r($c->pairSum()); // Expect "XXX"
+//print_r($c->pairSum()); // Expect "XXX"
+
 ?>
