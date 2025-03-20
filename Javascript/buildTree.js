@@ -26,5 +26,6 @@ export function buildTree(arr) {
 	}
 	return root;
 }
+// import TreeNode, buildTree from buildTree.js
 //export { TreeNode, buildTree };
 //console.log(buildTree([1,2,3,null,5,null,4]));
