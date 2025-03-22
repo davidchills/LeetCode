@@ -7,9 +7,8 @@ var TreeNode = /** @class */ (function () {
     }
     return TreeNode;
 }());
-export { TreeNode };
-// Function to build a tree from an array representation
-export function buildTree(arr) {
+
+function buildTree(arr) {
     var n = arr.length;
     if (n === 0 || arr[0] === null)
         return null;
