@@ -18,7 +18,7 @@ class Solution {
         return $result;        
     }
     
-    private function backtrack(int $start, int $n, $k, array &$combination, array &$result): void {
+    private function backtrack(int $start, int $n, int $k, array &$combination, array &$result): void {
         if (count($combination) === $k) {
             $result[] = $combination;
             return;
