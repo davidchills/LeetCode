@@ -10,7 +10,7 @@ class ListNode {
 }
 
 function createLinkedList($arr) {
-    if (empty($arr)) { return null; }
+    if (empty($arr)) { return new ListNode(null); }
     $head = new ListNode(array_shift($arr));
     $current = $head;
     foreach ($arr as $val) {
@@ -28,14 +28,8 @@ function printLinkedList($head) {
     }
     echo implode(" -> ", $result) . "\n";
 }
-
+/*
 class Solution {
-
-    /**
-     * @param ListNode $list1
-     * @param ListNode $list2
-     * @return ListNode
-     */
     function mergeTwoLists($list1, $list2) {
         $dummy = new ListNode();
         $current = $dummy;
@@ -68,4 +62,5 @@ $list2 = createLinkedList([1, 3, 5]);
 //$list2 = createLinkedList([0]);
 $c = new Solution;
 printLinkedList($c->mergeTwoLists($list1, $list2));
+*/
 ?>
