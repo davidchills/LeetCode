@@ -31,3 +31,26 @@ function buildTree(arr: (number | null)[]): TreeNode | null {
     }
     return root;
 }
+
+function printTree(root: TreeNode | null) {
+	if (root === null) {
+		console.log("Empty Tree");
+		return;
+	}
+	let queue: TreeNode[] = [root];
+	let levelValues: number[] = [];
+	while (queue.length > 0) {
+		const levelSize = queue.length;
+		for (let i = 0; i < levelSize; i++) {
+			const node = queue.shift()!;
+			levelValues.push(node.val);
+			if (node.left !== null) {
+				queue.push(node.left);
+			}
+			if (node.right !== null) {
+				queue.push(node.right);
+			}			
+		}
+	}
+	console.log(levelValues);
+}

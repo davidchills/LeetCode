@@ -32,3 +32,27 @@ func buildTree(_ arr: [Int?]) -> TreeNode? {
     }
     return root
 }
+
+func printTree(_ root: TreeNode?) {
+    if root == nil {
+        print("Empty Tree")
+        return
+    }
+    
+    var queue: [TreeNode] = [root!]
+    var levelValues: [Int] = []
+    while !queue.isEmpty {
+        let levelSize = queue.count
+        for _ in 0..<levelSize {
+            let node = queue.removeFirst()
+            levelValues.append(node.val)
+            if let left = node.left {
+                queue.append(left)
+            }
+            if let right = node.right {
+                queue.append(right)
+            }
+        }
+    }
+    print(levelValues)
+}
