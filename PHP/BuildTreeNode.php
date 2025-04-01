@@ -10,7 +10,7 @@ class TreeNode {
     }
 }   
 	
-function buildTree($arr) {
+function buildTree(array $arr): ?TreeNode {
 	$n = count($arr);
 	if (empty($arr) || $arr[0] === null) { return null; }
 	$root = new TreeNode($arr[0]);
@@ -33,7 +33,30 @@ function buildTree($arr) {
 
 	}
 	return $root;
-}	
+}
+	
+function printTree(?TreeNode $root) {
+	if ($root === null) {
+		print "Empty Tree\n";
+		return;
+	}
+	$queue = [$root];
+	$levelValues = [];
+	while (count($queue) > 0) {
+		$levelSize = count($queue);
+		for ($i = 0; $i < $levelSize; $i++) {
+			$node = array_shift($queue);
+			$levelValues[] = $node->val;
+			if ($node->left !== null) {
+				$queue[] = $node->left;
+			}
+			if ($node->right !== null) {
+				$queue[] = $node->right;
+			}
+		}
+	}
+	print "[".implode(", ", array_values($levelValues))."]\n";
+}
 	
 //$arr = [1,2,3,null,5,null,4];
 //$root = buildTree($arr);

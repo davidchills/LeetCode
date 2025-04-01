@@ -26,6 +26,28 @@ export function buildTree(arr) {
 	}
 	return root;
 }
-// import { TreeNode, buildTree } from './buildTree.js'
+export function printTree(root) {
+	if (root === null) {
+		console.log("Empty Tree");
+		return;
+	}
+	let queue = [root];
+	let levelValues = [];
+	while (queue.length > 0) {
+		const levelSize = queue.length;
+		for (let i = 0; i < levelSize; i++) {
+			const node = queue.shift();
+			levelValues.push(node.val);
+			if (node.left !== null) {
+				queue.push(node.left);
+			}
+			if (node.right !== null) {
+				queue.push(node.right);
+			}			
+		}
+	}
+	console.log(levelValues);
+}
+// import { TreeNode, buildTree, printTree } from './buildTree.js'
 //export { TreeNode, buildTree };
 //console.log(buildTree([1,2,3,null,5,null,4]));

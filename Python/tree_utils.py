@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Utility for dealing with Trees in Leetcode challenges
-from tree_utils import TreeNode, buildTree
+from tree_utils import TreeNode, buildTree, print_tree
 """
 from typing import Optional, List
 from collections import deque
@@ -37,3 +37,23 @@ class TreeNode:
         self.left = left
         self.right = right
         
+def print_tree(root: Optional['TreeNode']) -> None:
+    if not root:
+        print("Empty tree")
+        return
+
+    queue = deque([root])
+    level_vals = []
+    while queue:
+        level_size = len(queue)
+        
+        for _ in range(level_size):
+            node = queue.popleft()
+            level_vals.append(node.val)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+                
+    print(level_vals)
+    
