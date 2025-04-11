@@ -5,7 +5,7 @@ Given a positive integer n, write a function that returns the number of set bits
 191. Number of 1 Bits    
 */
 class Solution {
-    func hammingWeight(_ n: UInt32) -> Int {
+    func hammingWeight(_ n: Int) -> Int {
         var n = n
         var weight = 0
         while n != 0 {
