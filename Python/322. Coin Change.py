@@ -30,4 +30,5 @@ solution = Solution()
 print(solution.coinChange([1,2,5], 11)) # Expect 3
 print(solution.coinChange([2], 3)) # Expect -1
 print(solution.coinChange([1], 0)) # Expect 0
+print(solution.coinChange([2], 1)) # Expect -1
 
