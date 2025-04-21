@@ -8,20 +8,23 @@ You may assume that you have an infinite number of each kind of coin.
 */
 class Solution {
     func coinChange(_ coins: [Int], _ amount: Int) -> Int {
-        if amount == 0 { return 0 }
         let tooMuch = amount + 1
-        var dp = Array(repeating: tooMuch, count: amount + 1)
+        var dp = [Int](repeating: tooMuch, count: amount + 1)
         dp[0] = 0
         
-        for coin in coins {
-            for i in coin...(amount) {
-                dp[i] = min(dp[i], dp[i - coin] + 1)
+        for amt in 1..<dp.count {
+            for coin in coins {
+                if coin <= amt {
+                    dp[amt] = min(dp[amt], dp[amt - coin] + 1)
+                }
             }
         }
-        return (dp[amount] == tooMuch) ? -1 : dp[amount]
+        
+        return dp[amount] > amount ? -1 : dp[amount]       
     }
 }
 let solution = Solution()
 print(solution.coinChange([1,2,5], 11)) // Expect 3
 print(solution.coinChange([2], 3)) // Expect -1
 print(solution.coinChange([1], 0)) // Expect 0
+print(solution.coinChange([2], 1)) // Expect -1
