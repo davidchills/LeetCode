@@ -20,11 +20,6 @@ class Solution {
             }
             for num in start..<10 {
                 if num > remaining { break }
-                let picksLeft = k - combo.count - 1
-                let maxPossibleSum = (num + 1 + 9) * picksLeft / 2
-                if remaining - num > maxPossibleSum {
-                    continue
-                }
                 combo.append(num)
                 backtrack(num + 1, remaining - num)
                 combo.removeLast()
@@ -38,3 +33,4 @@ let solution = Solution()
 print(solution.combinationSum3(3, 7)) // Expect [[1,2,4]]
 print(solution.combinationSum3(3, 9)) // Expect [[1,2,6],[1,3,5],[2,3,4]]
 print(solution.combinationSum3(4, 1)) // Expect []
+print(solution.combinationSum3(3, 15)) // Expect [[1,5,9],[1,6,8],[2,4,9],[2,5,8],[2,6,7],[3,4,8],[3,5,7],[4,5,6]]
