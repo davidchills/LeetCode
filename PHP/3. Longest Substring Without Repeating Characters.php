@@ -26,9 +26,9 @@ class Solution {
 }
 
 $c = new Solution;
-print_r($c->lengthOfLongestSubstring("abcabcbb")); // Expect 3
+//print_r($c->lengthOfLongestSubstring("abcabcbb")); // Expect 3
 //print_r($c->lengthOfLongestSubstring("bbbbb")); // Expect 1
-//print_r($c->lengthOfLongestSubstring("pwwkew")); // Expect 3
+print_r($c->lengthOfLongestSubstring("pwwkew")); // Expect 3
 //print_r($c->lengthOfLongestSubstring("")); // Expect 0 
 //print_r($c->lengthOfLongestSubstring("a")); // Expect 1
 //print_r($c->lengthOfLongestSubstring("au")); // Expect 2 
