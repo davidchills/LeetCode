@@ -5,7 +5,7 @@ DESCRIPTION
 from typing import List
 class Solution:
     def countGoodArrays(self, n: int, m: int, k: int) -> int:
-       
+       pass
 
     
 # Test Code
